@@ -53,7 +53,7 @@ router.post('/login',(req,res)=>{
                     exp: Math.floor(Date.now() / 1000) + (2 * 60)
                 }, process.env.SECRET_KEY);
                 console.log(token);
-                res.cookie('token' , token).json({token:token});
+                res.cookie('token' , token , { maxAge: 900000}).json({token:token});
             }
            else{
                 res.status(403).json({err:"Incorrect Password"});
