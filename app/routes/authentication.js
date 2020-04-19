@@ -4,9 +4,9 @@ const users= require('../model/user.js');
 mongoose = require('mongoose');
 require('dotenv').config();
 var jwt = require('jsonwebtoken');
-var cookieParser = require('cookie-parser');
 
-router.use(cookieParser());
+
+
 
 const bcrypt = require('bcrypt');
 const saltRounds=10;

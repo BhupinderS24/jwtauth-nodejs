@@ -3,7 +3,7 @@ const app= express();
 const logger = require('./logger/logger.js');
 const mongoose = require('mongoose');
 require('dotenv').config();
-
+var cookieParser = require('cookie-parser');
 
 
 
@@ -11,7 +11,7 @@ var mongoDB = process.env.MONGODB_URI;
 
 mongoose.connect(mongoDB , {useNewUrlParser: true});
 
-
+app.use(cookieParser());
 app.use(logger);
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
