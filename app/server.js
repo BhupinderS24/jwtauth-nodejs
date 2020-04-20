@@ -22,16 +22,16 @@ app.use((req,res,next)=>{
         "Access-Control-Allow-Headers",
         "*"
     );
-    res.header('Access-Control-Allow-Credentials','true');
-    res.header('Access-Control-Allow-Methods','*');
+    // res.header('Access-Control-Allow-Credentials','true');
+    // res.header('Access-Control-Allow-Methods','*');
     if(req.method==='OPTIONS'){
         res.header('Access-Control-Allow-Methods','PUT,POST,PATCH,DELETE,GET');
         res.header('Access-Control-Allow-Credentials','true');
-        res.header(
-            "Access-Control-Allow-Headers",
-            "*"
-        );
-        res.header('Access-control-Allow-Origin','http://localhost:4200');
+        // res.header(
+        //     "Access-Control-Allow-Headers",
+        //     "*"
+        // );
+        // res.header('Access-control-Allow-Origin','http://localhost:4200');
         return res.status(200).json({});
     }
     next();
