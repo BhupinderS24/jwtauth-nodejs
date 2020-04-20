@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.use((req,res,next)=>{
-    res.header('Access-control-Allow-Origin',' http://localhost:4200');
+    res.header('Access-control-Allow-Origin','*');
     res.header(
         "Access-Control-Allow-Headers",
         "*"
@@ -31,7 +31,7 @@ app.use((req,res,next)=>{
             "Access-Control-Allow-Headers",
             "*"
         );
-        res.header('Access-control-Allow-Origin',' http://localhost:4200');
+        res.header('Access-control-Allow-Origin','*');
         return res.status(200).json({});
     }
     next();
