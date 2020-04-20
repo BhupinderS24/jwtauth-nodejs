@@ -6,8 +6,6 @@ require('dotenv').config();
 var jwt = require('jsonwebtoken');
 
 
-
-
 const bcrypt = require('bcrypt');
 const saltRounds=10;
 router.post('/signup',(req,res)=>{
